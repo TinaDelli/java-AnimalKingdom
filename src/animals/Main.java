@@ -10,7 +10,27 @@ public class Main
         {
             if (tester.test(a))
             {
-                System.out.println(a.getName() + " Breathes From: " + a.getBreathType());
+                System.out.println(a.getName() + " breathes from: " + a.getBreathType());
+            }
+        }
+    }
+    public static void printAnimalsByYear(ArrayList<AbstractAnimal> animals, CheckAnimal tester)
+    {
+        for (AbstractAnimal a : animals)
+        {
+            if (tester.test(a))
+            {
+                System.out.println(a.getName() + " was named in: " + a.getYear());
+            }
+        }
+    }
+    public static void printAnimalsByName(ArrayList<AbstractAnimal> animals, CheckAnimal tester)
+    {
+        for (AbstractAnimal a : animals)
+        {
+            if (tester.test(a))
+            {
+                System.out.println(a.getName() + " is a mammal! ");
             }
         }
     }
@@ -76,13 +96,24 @@ public class Main
        myList.forEach((a) -> System.out.println(a.getName()));
        System.out.println();
 
-       System.out.println("Animals That Breathe by Lungs");
+       System.out.println("Animals That Breathe by Lungs:");
        printAnimals(myList, a -> a.getBreathType()== "Lungs");
        System.out.println();
 
        System.out.println("Animals That Breathe by Lungs and were Named in 1758:");
        printAnimals(myList, a -> (a.getBreathType() =="Lungs") && (a.getYear() == 1758));
        System.out.println();
+
+       System.out.println("Animals that Lay Eggs And Breath With Lungs");
+       printAnimals(myList, a -> (a.getBreathType() =="Lungs") && (a.getReproduction() == "Eggs"));
+       System.out.println();
+
+       System.out.println("Animals that were Named in 1758 alphabetically:");
+       printAnimalsByYear(myList, a -> a.getYear() == 1758);
+       System.out.println();
+
+       System.out.println("Animals that are Mammals: ");
+       printAnimalsByName(myList, a -> (a.getFoodLevel() > 0) && (a instanceof Mammals) );
        
    } 
 }
