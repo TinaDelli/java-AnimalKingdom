@@ -5,7 +5,7 @@ public class Birds extends AbstractAnimal
     public String name;
     public int year;
 
-    public Birds (int food, String name, int year)
+    public Birds (int food, String name, Integer year)
     {
         super(food);
         this.name = name;
@@ -16,6 +16,12 @@ public class Birds extends AbstractAnimal
     public String getName()
     {
         return name;
+    }
+
+    @Override
+    public Integer getYear()
+    {
+        return year;
     }
 
     @Override

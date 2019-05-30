@@ -49,5 +49,22 @@ public class Main
        System.out.println(myList.toString());
        System.out.println();
 
+       System.out.println("***Lambda Expressions");
+       System.out.println("Animals By Year In Decending Order: ");
+       myList.sort((a1, a2) -> a2.getYear().compareTo(a1.getYear()));
+
+       myList.forEach((a) -> System.out.println(a.getName() + " Was Named in Year: " + a.getYear()));
+       System.out.println();
+    
+       System.out.println("Animals By Movement Type: ");
+       myList.sort((a1, a2)-> a1.getMovement().compareToIgnoreCase(a2.getMovement()));
+       myList.forEach((a)-> System.out.println("Animal: " + a.getName() + " Moves By: " + a.getMovement()));
+       System.out.println();
+
+       System.out.println("Animals Alphabetically: ");
+       myList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+       myList.forEach((a) -> System.out.println(a.getName()));
+       System.out.println();
+    
    } 
 }

@@ -19,6 +19,12 @@ public class Mammals extends AbstractAnimal
     }
 
     @Override
+    public Integer getYear()
+    {
+        return year;
+    }
+
+    @Override
     public String getMovement()
     {
         return "Walk";

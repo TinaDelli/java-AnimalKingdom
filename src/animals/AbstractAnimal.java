@@ -15,6 +15,7 @@ public abstract class AbstractAnimal
     }
 
     public abstract String getName();
+    public abstract Integer getYear();
     public abstract String getMovement();
     public abstract String getBreathType();
     public abstract String getReproduction();
