@@ -4,6 +4,16 @@ import java.util.*;
 
 public class Main
 {
+    public static void printAnimals(ArrayList<AbstractAnimal> animals, CheckAnimal tester)
+    {
+        for (AbstractAnimal a : animals)
+        {
+            if (tester.test(a))
+            {
+                System.out.println(a.getName() + " Breathes From: " + a.getBreathType());
+            }
+        }
+    }
    public static void main (String[] args)
    {
        System.out.println("***Animal Collection ***");
@@ -65,6 +75,14 @@ public class Main
        myList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
        myList.forEach((a) -> System.out.println(a.getName()));
        System.out.println();
-    
+
+       System.out.println("Animals That Breathe by Lungs");
+       printAnimals(myList, a -> a.getBreathType()== "Lungs");
+       System.out.println();
+
+       System.out.println("Animals That Breathe by Lungs and were Named in 1758:");
+       printAnimals(myList, a -> (a.getBreathType() =="Lungs") && (a.getYear() == 1758));
+       System.out.println();
+       
    } 
 }

@@ -27,7 +27,7 @@ public class Mammals extends AbstractAnimal
     @Override
     public String getMovement()
     {
-        return "Walk";
+        return "Walking";
     }   
 
     @Override
@@ -45,7 +45,7 @@ public class Mammals extends AbstractAnimal
     @Override
     public String toString()
     {
-        return "Mammals :" +
+        return "Mammals: " +
         "Name: " + name + '\'' +
         ", Year Named: " + year + 
         '}';

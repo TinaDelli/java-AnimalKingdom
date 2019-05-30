@@ -27,7 +27,7 @@ public class Birds extends AbstractAnimal
     @Override
     public String getMovement()
     {
-        return "Fly";
+        return "Flying";
     }
 
     @Override
@@ -45,7 +45,7 @@ public class Birds extends AbstractAnimal
     @Override
     public String toString()
     {
-        return "Birds :" +
+        return "Birds: " +
         "Name: " + name + '\'' +
         ", Year Named: " + year + 
         '}';

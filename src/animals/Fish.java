@@ -27,7 +27,7 @@ public class Fish extends AbstractAnimal
     @Override
     public String getMovement()
     {
-        return "Swim";
+        return "Swimming";
     }
 
     @Override
@@ -45,7 +45,7 @@ public class Fish extends AbstractAnimal
     @Override
     public String toString()
     {
-        return "Fish :" +
+        return "Fish: " +
         "Name: " + name + '\'' +
         ", Year Named: " + year + 
         '}';
